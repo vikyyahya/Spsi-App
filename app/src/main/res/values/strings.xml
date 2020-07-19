@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Spsi App</string>
+    <string name="regiter_underline"><u>Registrasi Disini</u></string>
 </resources>
