@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/spsi-foto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></LinearLayout>
@@ -115,8 +114,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/background_login_email"
-        android:drawableLeft="@drawable/ic_google"
-        android:fontFamily="@font/sfprotext_normal"
+
         android:paddingLeft="100dp"
         android:paddingRight="100dp"
         android:singleLine="true"
