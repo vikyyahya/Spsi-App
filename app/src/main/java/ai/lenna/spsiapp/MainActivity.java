@@ -8,7 +8,7 @@ import android.os.Bundle;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import ai.lenna.spsiapp.home_karyawan.HomeFragment;
-import butterknife.ButterKnife;
+//import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
     private Fragment fragment ;
