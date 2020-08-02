@@ -1,14 +1,17 @@
 package ai.lenna.spsiapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import ai.lenna.spsiapp.home_karyawan.HomeFragment;
-import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
     private Fragment fragment ;
@@ -29,4 +32,24 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener  onClickBottomSheet = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()){
+                case R.id.navigation_home:
+                        fragment = new HomeFragment();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
+
+                    break;
+                case R.id.navigation_profile:
+
+                    break;
+                case R.id.navigation_information:
+
+                    break;
+            }
+            return true;
+        }
+    };
 }
