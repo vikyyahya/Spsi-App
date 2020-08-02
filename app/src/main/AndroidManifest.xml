@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".profile.ProfilActivity"></activity>
-        <activity android:name=".home.HomeActivity" />
+        <activity android:name=".home_karyawan.HomeKaryawanActivity" />
         <activity
             android:name=".register.RegisterActivity"
             android:theme="@style/AppTheme.NoActionBar" />

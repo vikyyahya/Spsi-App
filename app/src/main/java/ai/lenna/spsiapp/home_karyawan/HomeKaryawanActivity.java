@@ -1,4 +1,4 @@
-package ai.lenna.spsiapp.home;
+package ai.lenna.spsiapp.home_karyawan;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import ai.lenna.spsiapp.R;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeKaryawanActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
