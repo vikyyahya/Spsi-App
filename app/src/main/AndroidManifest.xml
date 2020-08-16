@@ -4,12 +4,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/spsi"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".pengunduranActivity2"></activity>
+        <activity android:name=".informasi_terkiniActivity2"></activity>
+        <activity android:name=".pengunduranActivity2" />
         <activity android:name=".home_karyawan.PendaftaranActivity" />
         <activity android:name=".profile.ProfilActivity" />
         <activity android:name=".home_karyawan.HomeKaryawanActivity" />
