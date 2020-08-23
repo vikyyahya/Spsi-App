@@ -37,18 +37,6 @@
             app:layout_constraintVertical_bias="0.31" />
 
         <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/dataanggota"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.193"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.568" />
-
-        <ImageView
             android:id="@+id/imageView5"
             android:layout_width="80dp"
             android:layout_height="80dp"
@@ -67,10 +55,10 @@
             android:text="Pendaftaran"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.191"
+            app:layout_constraintHorizontal_bias="0.215"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.429" />
+            app:layout_constraintVertical_bias="0.445" />
 
         <TextView
             android:id="@+id/textView24"
@@ -79,10 +67,10 @@
             android:text="Karyawan SPSI PT PANARUB INDUSTRY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintHorizontal_bias="0.447"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.188" />
+            app:layout_constraintVertical_bias="0.216" />
 
         <ImageView
             android:id="@+id/imageView6"
@@ -100,13 +88,13 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Data Anggota"
+            android:text="Profile"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.187"
+            app:layout_constraintHorizontal_bias="0.221"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.66" />
+            app:layout_constraintVertical_bias="0.674" />
 
         <TextView
             android:id="@+id/textView5"
@@ -139,10 +127,10 @@
             android:text="Struktur SPSI"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.731"
+            app:layout_constraintHorizontal_bias="0.746"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.66" />
+            app:layout_constraintVertical_bias="0.674" />
 
         <TextView
             android:id="@+id/textView2"
@@ -151,10 +139,10 @@
             android:text="Pengunduran"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.728"
+            app:layout_constraintHorizontal_bias="0.746"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.429" />
+            app:layout_constraintVertical_bias="0.445" />
 
         <ImageView
             android:id="@+id/imageView8"
@@ -179,6 +167,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.024" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.193"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.568" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
