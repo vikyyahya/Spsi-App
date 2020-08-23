@@ -27,7 +27,6 @@ public interface LoginContract {
         interface OnFinishedListener {
             void onFinishedSuccess(LoginResponse loginResp);
             void onFinishedFail(GenericErrorResponseBean genericErrorResponseBean);
-
             void onFailure(Throwable t);
         }
 
