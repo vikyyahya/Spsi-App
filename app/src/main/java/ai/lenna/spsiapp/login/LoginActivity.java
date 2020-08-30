@@ -41,6 +41,11 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
         register = findViewById(R.id.text_view_register);
         button_login = findViewById(R.id.button_login);
         presenter = new LoginPresenter(this);
+        edEmail = findViewById(R.id.edit_text_email);
+        edPassword = findViewById(R.id.edit_text_password);
+        loginRequest = new LoginRequest();
+        progressDialog = new ProgressDialog(this);
+
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
