@@ -53,8 +53,12 @@ dependencies {
 
     //Library MaterialDialog
     implementation 'com.github.javiersantos:MaterialStyledDialogs:2.2'
+    //permission manager
+    implementation 'com.github.karanchuri:PermissionManager:0.1.0'
 
-
+    //pref
+    //Preferences Library
+    implementation 'com.pixplicity.easyprefs:library:1.9.0'
 
 
 }

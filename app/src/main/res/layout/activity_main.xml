@@ -18,6 +18,7 @@
         android:id="@+id/bottomNavigationView"
         android:background="@color/white_solid"
         app:menu="@menu/bottom_navigations"
+        android:visibility="gone"
         app:labelVisibilityMode="labeled"
         android:layout_marginTop="5dp"
         app:itemIconSize="40dp"

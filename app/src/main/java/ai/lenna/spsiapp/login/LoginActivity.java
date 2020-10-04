@@ -13,10 +13,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.github.javiersantos.materialstyleddialogs.MaterialStyledDialog;
+import com.karan.churi.PermissionManager.PermissionManager;
+import com.pixplicity.easyprefs.library.Prefs;
 
 import ai.lenna.spsiapp.MainActivity;
 import ai.lenna.spsiapp.R;
 import ai.lenna.spsiapp.register.RegisterActivity;
+import ai.lenna.spsiapp.util.Constant;
 import ai.lenna.spsiapp.util.ShowAllert;
 
 public class LoginActivity extends AppCompatActivity implements LoginContract.View{
@@ -27,10 +30,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
     ShowAllert showAllert;
     LoginRequest loginRequest;
     LoginResponse loginResponse;
-
-
-
-
+    PermissionManager permission;
     EditText edEmail,edPassword;
 
     @Override
@@ -45,6 +45,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
         edPassword = findViewById(R.id.edit_text_password);
         loginRequest = new LoginRequest();
         progressDialog = new ProgressDialog(this);
+        permission = new PermissionManager() {};
 
 
         register.setOnClickListener(new View.OnClickListener() {
@@ -78,16 +79,16 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
         });
 
 
-
-
     }
 
     @Override
     public void moveToHome(LoginResponse resp) {
 
         if(resp.isSuccess()){
+//            Prefs.putInt(Constant.LOGIN, 1);
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
+            finish();
         }
 
 
@@ -95,16 +96,18 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
 
     @Override
     public void showDialogGagal(String message) {
-
+        showAllertValidation( message);
     }
 
     @Override
     public void showProgress() {
-
+        progressDialog.setTitle("Tunggu sebentar");
+        progressDialog.show();
     }
 
     @Override
     public void hideProgress() {
+        progressDialog.hide();
 
     }
 
