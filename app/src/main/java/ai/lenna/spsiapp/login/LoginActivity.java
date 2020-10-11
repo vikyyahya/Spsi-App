@@ -18,6 +18,7 @@ import com.pixplicity.easyprefs.library.Prefs;
 
 import ai.lenna.spsiapp.MainActivity;
 import ai.lenna.spsiapp.R;
+import ai.lenna.spsiapp.home.HomeActivity;
 import ai.lenna.spsiapp.register.RegisterActivity;
 import ai.lenna.spsiapp.util.Constant;
 import ai.lenna.spsiapp.util.ShowAllert;
@@ -47,6 +48,12 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
         progressDialog = new ProgressDialog(this);
         permission = new PermissionManager() {};
 
+        //set test
+
+        edEmail.setText("viky@yahoo.com");
+        edPassword.setText("12345678");
+
+        chekLogin();
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,12 +88,31 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
 
     }
 
+    private void chekLogin(){
+        if (Prefs.getInt(Constant.LOGIN,0) == 1){
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    }
+
     @Override
     public void moveToHome(LoginResponse resp) {
 
         if(resp.isSuccess()){
-//            Prefs.putInt(Constant.LOGIN, 1);
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            Prefs.putInt(Constant.LOGIN, 1);
+            Prefs.putString(Constant.TOKEN, resp.getAccessToken());
+            Prefs.putString(Constant.NAME, resp.getUser().getName());
+            Prefs.putString(Constant.NIK,  resp.getUser().getNik());
+            Prefs.putInt(Constant.ID,  resp.getUser().getId());
+            Prefs.putString(Constant.EMAIL,  resp.getUser().getEmail());
+            Prefs.putString(Constant.PLANT,  resp.getUser().getPlant());
+            Prefs.putString(Constant.BAGIAN,  resp.getUser().getBagian());
+            Prefs.putString(Constant.TEMPAT_LAHIR,  resp.getUser().getTanggal_lahir());
+            Prefs.putString(Constant.TANGGAL_LAHIR,  resp.getUser().getTanggal_lahir());
+            Prefs.putString(Constant.AGAMA,  resp.getUser().getAgama() );
+            Prefs.putString(Constant.ALAMAT,  resp.getUser().getAlamat());
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
             startActivity(intent);
             finish();
         }
@@ -102,6 +128,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
     @Override
     public void showProgress() {
         progressDialog.setTitle("Tunggu sebentar");
+        progressDialog.setMessage("Tunggu sebentar");
         progressDialog.show();
     }
 

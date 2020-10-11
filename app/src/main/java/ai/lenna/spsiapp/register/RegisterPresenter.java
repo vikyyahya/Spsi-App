@@ -31,10 +31,12 @@ public class RegisterPresenter implements RegisterContract.Presenter, RegisterCo
     }
 
     @Override
-    public void onFinishedSuccess(RegisterResponse loginResp) {
+    public void onFinishedSuccess(RegisterResponse registerResponse) {
         if (view != null){
             view.hideProgress();
         }
+        view.moveToHome(registerResponse);
+
     }
 
     @Override

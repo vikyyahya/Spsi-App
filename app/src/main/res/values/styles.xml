@@ -17,4 +17,6 @@
         parent="Widget.Design.BottomNavigationView">
         <item name="android:textSize">10sp</item>
     </style>
+
+
 </resources>

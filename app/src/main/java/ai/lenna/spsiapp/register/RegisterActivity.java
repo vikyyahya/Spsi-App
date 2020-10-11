@@ -42,11 +42,23 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
         etPlan= findViewById(R.id.et_plan);
         etTempatLahir= findViewById(R.id.et_tempat);
         etTanggalLahir= findViewById(R.id.et_ttl);
-        etJenisKelamin= findViewById(R.id.et_jenis_kelamin);
+        etJenisKelamin= findViewById(R.id.et_jenis_kel);
         etAgama= findViewById(R.id.et_agama);
         etAlamat= findViewById(R.id.et_alamat);
         etEmail= findViewById(R.id.et_email);
         etPassword= findViewById(R.id.et_password);
+
+        //
+        etNama.setText("viky");
+        etNik.setText("127102987");
+        etBagian.setText("Jahit");
+        etPlan.setText("B");
+        etTempatLahir.setText("klaten");
+        etJenisKelamin.setText("Laki - laki");
+        etAgama.setText("Islam");
+        etAlamat.setText("Tangerang");
+        etEmail.setText("viky@yahoo.com");
+        etPassword.setText("12345678");
 
         btnRegister= findViewById(R.id.btn_daftar);
         progressDialog= new ProgressDialog(this);
@@ -98,8 +110,17 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
 
     @Override
     public void moveToHome(RegisterResponse resp) {
-        Prefs.putInt(Constant.LOGIN, 1);
-        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+//        Prefs.putInt(Constant.LOGIN, 1);
+//        Prefs.putString(Constant.NAME, resp.getUser().getName());
+//        Prefs.putString(Constant.NIK,  resp.getUser().getNik());
+//        Prefs.putString(Constant.EMAIL,  resp.getUser().getEmail());
+//        Prefs.putString(Constant.PLANT,  resp.getUser().getPlant());
+//        Prefs.putString(Constant.BAGIAN,  resp.getUser().getBagian());
+//        Prefs.putString(Constant.TEMPAT_LAHIR,  resp.getUser().getTanggal_lahir());
+//        Prefs.putString(Constant.TANGGAL_LAHIR,  resp.getUser().getTanggal_lahir());
+//        Prefs.putString(Constant.AGAMA,  resp.getUser().getAgama() );
+//        Prefs.putString(Constant.ALAMAT,  resp.getUser().getAlamat());
+        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
@@ -113,12 +134,14 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
     @Override
     public void showProgress() {
         progressDialog.setTitle("Mohon Tunggu");
+        progressDialog.setMessage("Mohon Tunggu");
         progressDialog.show();
 
     }
 
     @Override
     public void hideProgress() {
+
         progressDialog.hide();
 
     }

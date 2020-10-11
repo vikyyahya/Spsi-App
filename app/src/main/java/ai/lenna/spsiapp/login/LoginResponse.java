@@ -1,13 +1,13 @@
 package ai.lenna.spsiapp.login;
 
 public class LoginResponse {
-	private String accessToken;
+	private String access_token;
 	private int code;
 	private boolean success;
 	private User user;
 
 	public String getAccessToken(){
-		return accessToken;
+		return access_token;
 	}
 
 	public int getCode(){
