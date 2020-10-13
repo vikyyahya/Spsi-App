@@ -1,5 +1,6 @@
 package ai.lenna.spsiapp.network;
 
+import ai.lenna.spsiapp.berita.BeritaResponse;
 import ai.lenna.spsiapp.login.LoginRequest;
 import ai.lenna.spsiapp.login.LoginResponse;
 import ai.lenna.spsiapp.register.RegisterRequest;
@@ -21,5 +22,11 @@ public interface ApiService {
 
     @GET("api/get-profil")
     Call<LoginResponse> getProfile(@Header("Authorization") String token);
+
+    @GET("api/get-berita")
+    Call<BeritaResponse> getBerita(@Header("Authorization") String token);
+
+    @GET("api/get-kegiatan")
+    Call<LoginResponse> getkegiatan(@Header("Authorization") String token);
 
 }

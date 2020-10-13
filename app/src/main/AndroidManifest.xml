@@ -15,13 +15,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".pengunduran.PengunduranActivity"
+        <activity android:name=".berita.BeritaActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".pengunduran.PengunduranActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".home.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".profile.UbahProfilActivity"
-            android:theme="@style/AppTheme.NoActionBar"  />
+        <activity
+            android:name=".profile.UbahProfilActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".splash_screen.SplashActivity" />
         <activity android:name=".informasi_terkiniActivity2" />
         <activity android:name=".pengunduranActivity2" />
