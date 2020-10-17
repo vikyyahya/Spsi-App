@@ -12,6 +12,7 @@ import com.pixplicity.easyprefs.library.Prefs;
 
 import ai.lenna.spsiapp.R;
 import ai.lenna.spsiapp.berita.BeritaActivity;
+import ai.lenna.spsiapp.kegiatan.KegiatanActivity;
 import ai.lenna.spsiapp.pengunduran.PengunduranActivity;
 import ai.lenna.spsiapp.profile.ProfilActivity;
 import ai.lenna.spsiapp.util.Constant;
@@ -32,6 +33,7 @@ public class HomeActivity extends AppCompatActivity {
         ivProfile.setOnClickListener(goProfil);
         ivPengunduran.setOnClickListener(goPengunduran);
         ivInformasi.setOnClickListener(goInformasi);
+        ivKegiatan.setOnClickListener(goKegiatan);
     }
 
     private View.OnClickListener goProfil = new View.OnClickListener() {
@@ -57,6 +59,14 @@ public class HomeActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(HomeActivity.this, BeritaActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    };
+    private View.OnClickListener goKegiatan = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(HomeActivity.this, KegiatanActivity.class);
             startActivity(intent);
             finish();
         }

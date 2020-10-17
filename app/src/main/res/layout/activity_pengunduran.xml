@@ -79,6 +79,7 @@
                 android:layout_width="251dp"
                 android:layout_height="39dp"
                 android:ems="10"
+                android:enabled="false"
                 android:hint="Nama"
                 android:inputType="text"
                 android:textSize="14sp" />
@@ -102,6 +103,7 @@
                 android:layout_height="39dp"
                 android:ems="10"
                 android:hint="Nik"
+                android:enabled="false"
                 android:inputType="text"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -123,6 +125,7 @@
                 android:layout_height="39dp"
                 android:ems="10"
                 android:hint="Bagian"
+                android:enabled="false"
                 android:inputType="text"
                 android:textSize="14sp" />
 
@@ -145,6 +148,7 @@
                 android:layout_height="39dp"
                 android:ems="10"
                 android:hint="Plant"
+                android:enabled="false"
                 android:inputType="text"
                 android:textSize="14sp" />
 
@@ -153,7 +157,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnPengunduran"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="AJUKAN"

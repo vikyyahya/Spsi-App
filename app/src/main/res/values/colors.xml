@@ -10,7 +10,6 @@
     <color name="dialog_header_gagal">@color/burnt_sienna</color>
 
     <color name="burnt_sienna">#ED6054</color>
-
-
+    <color name="red_notification">#ed5d51</color>
 
 </resources>

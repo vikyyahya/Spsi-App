@@ -17,6 +17,9 @@ public interface ApiService {
     @POST("api/login")
     Call<LoginResponse> submitLogin(@Body LoginRequest loginReq);
 
+    @GET("api/pengundurandiri")
+    Call<LoginResponse> submipengundurandiri(@Header("Authorization") String token);
+
     @POST("api/register")
     Call<RegisterResponse> submitRegister(@Body RegisterRequest registerRequest);
 
@@ -27,6 +30,6 @@ public interface ApiService {
     Call<BeritaResponse> getBerita(@Header("Authorization") String token);
 
     @GET("api/get-kegiatan")
-    Call<LoginResponse> getkegiatan(@Header("Authorization") String token);
+    Call<BeritaResponse> getkegiatan(@Header("Authorization") String token);
 
 }

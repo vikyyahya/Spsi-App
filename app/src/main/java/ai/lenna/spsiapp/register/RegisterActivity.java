@@ -78,7 +78,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
                             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                                etTanggalLahir.setText(year+  "-" + dayOfMonth + "-" + (monthOfYear + 1)  );
+                                etTanggalLahir.setText(year+  "-"  + (monthOfYear + 1) + "-" + dayOfMonth  );
                             }
                         }, year, month, day);
                 picker.show();
