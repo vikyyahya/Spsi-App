@@ -15,6 +15,7 @@ import ai.lenna.spsiapp.berita.BeritaActivity;
 import ai.lenna.spsiapp.kegiatan.KegiatanActivity;
 import ai.lenna.spsiapp.pengunduran.PengunduranActivity;
 import ai.lenna.spsiapp.profile.ProfilActivity;
+import ai.lenna.spsiapp.strukturorganisasi.StrukturOrganisasi;
 import ai.lenna.spsiapp.util.Constant;
 
 public class HomeActivity extends AppCompatActivity {
@@ -34,6 +35,7 @@ public class HomeActivity extends AppCompatActivity {
         ivPengunduran.setOnClickListener(goPengunduran);
         ivInformasi.setOnClickListener(goInformasi);
         ivKegiatan.setOnClickListener(goKegiatan);
+        ivStruktur.setOnClickListener(struktur);
     }
 
     private View.OnClickListener goProfil = new View.OnClickListener() {
@@ -67,6 +69,15 @@ public class HomeActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(HomeActivity.this, KegiatanActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    };
+
+    private View.OnClickListener struktur = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(HomeActivity.this, StrukturOrganisasi.class);
             startActivity(intent);
             finish();
         }

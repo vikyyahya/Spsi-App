@@ -15,8 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".kegiatan.KegiatanActivity"
+        <activity android:name=".strukturorganisasi.StrukturOrganisasi"
             android:theme="@style/AppTheme.NoActionBar" ></activity>
+        <activity
+            android:name=".kegiatan.KegiatanActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".berita.BeritaActivity"
             android:theme="@style/AppTheme.NoActionBar" />

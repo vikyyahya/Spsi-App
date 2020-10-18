@@ -8,6 +8,7 @@
     <color name="black">#0C0C0C</color>
     <color name="line">#e9e9e9</color>
     <color name="dialog_header_gagal">@color/burnt_sienna</color>
+    <color name="dialog_header_success">@android:color/holo_green_dark</color>
 
     <color name="burnt_sienna">#ED6054</color>
     <color name="red_notification">#ed5d51</color>

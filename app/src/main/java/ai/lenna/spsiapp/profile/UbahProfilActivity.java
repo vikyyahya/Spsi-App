@@ -12,6 +12,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.github.javiersantos.materialstyleddialogs.MaterialStyledDialog;
 import com.pixplicity.easyprefs.library.Prefs;
 
 import java.util.Calendar;
@@ -21,16 +22,20 @@ import ai.lenna.spsiapp.login.LoginResponse;
 import ai.lenna.spsiapp.network.ApiBuilder;
 import ai.lenna.spsiapp.network.ApiService;
 import ai.lenna.spsiapp.register.RegisterActivity;
+import ai.lenna.spsiapp.register.RegisterRequest;
+import ai.lenna.spsiapp.register.RegisterResponse;
 import ai.lenna.spsiapp.util.Constant;
+import ai.lenna.spsiapp.util.ShowAllert;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class UbahProfilActivity extends AppCompatActivity {
-    TextView etNama,etNik,etPlan,etBagian,etTempatLahir,etTanggalLahir,etJenisKelamin,etAgama,etAlamat,etEmail;
+    TextView etNama,etNik,etPlan,etBagian,etTempatLahir,etTanggalLahir,etJenisKelamin,etAgama,etAlamat,etEmail,etPassword;
     ProgressDialog progressDialog;
     DatePickerDialog picker;
     Button btnUbah;
+    RegisterRequest registerRequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +53,9 @@ public class UbahProfilActivity extends AppCompatActivity {
         etEmail= findViewById(R.id.et_email);
         etNik = findViewById(R.id.et_NIK);
         btnUbah = findViewById(R.id.btn_ubah);
+        etPassword = findViewById(R.id.et_password);
         getDataProfile();
+        registerRequest = new RegisterRequest();
 
         etTanggalLahir.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,19 +78,43 @@ public class UbahProfilActivity extends AppCompatActivity {
         });
         btnUbah.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-//                registerRequest.setName(etNama.getText().toString());
-//                registerRequest.setNik(etNik.getText().toString());
-//                registerRequest.setPlant(etPlan.getText().toString());
-//                registerRequest.setBagian(etBagian.getText().toString());
-//                registerRequest.setTempatLahir(etTempatLahir.getText().toString());
-//                registerRequest.setTanggalLahir(etTanggalLahir.getText().toString());
-//                registerRequest.setJenis_kelamin(etJenisKelamin.getText().toString());
-//                registerRequest.setAgama(etAgama.getText().toString());
-//                registerRequest.setAlamat(etAlamat.getText().toString());
-//                registerRequest.setEmail(etEmail.getText().toString());
-//                registerRequest.setPassword(etPassword.getText().toString());
-//                registerPresenter.requestDataFromServer(registerRequest);
+            public void onClick(final View v) {
+                progressDialog.setTitle("Tunggu sebentar");
+                progressDialog.setMessage("Tunggu sebentar");
+                progressDialog.show();
+                registerRequest.setName(etNama.getText().toString());
+                registerRequest.setNik(etNik.getText().toString());
+                registerRequest.setPlant(etPlan.getText().toString());
+                registerRequest.setBagian(etBagian.getText().toString());
+                registerRequest.setTempatLahir(etTempatLahir.getText().toString());
+                registerRequest.setTanggalLahir(etTanggalLahir.getText().toString());
+                registerRequest.setJenis_kelamin(etJenisKelamin.getText().toString());
+                registerRequest.setAgama(etAgama.getText().toString());
+                registerRequest.setAlamat(etAlamat.getText().toString());
+                registerRequest.setEmail(etEmail.getText().toString());
+                registerRequest.setPassword(etPassword.getText().toString());
+                ApiService service = ApiBuilder.getClient().create(ApiService.class);
+                Call<RegisterResponse> call = service.updateProfile("Bearer "+  Prefs.getString(Constant.TOKEN,"") ,registerRequest);
+                call.enqueue(new Callback<RegisterResponse>() {
+                    @Override
+                    public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
+                        progressDialog.hide();
+                        new MaterialStyledDialog.Builder(v.getContext())
+                                .setTitle("Berhasil")
+                                .setDescription("Berhasil Update Profile")
+                                .setIcon(R.drawable.ic_dialog_checked)
+                                .setHeaderColor(R.color.dialog_header_success)
+                                .setPositiveText("OK")
+                                .show();
+                        getDataProfile();
+                    }
+
+                    @Override
+                    public void onFailure(Call<RegisterResponse> call, Throwable t) {
+
+                    }
+                });
+
 
             }
         });
