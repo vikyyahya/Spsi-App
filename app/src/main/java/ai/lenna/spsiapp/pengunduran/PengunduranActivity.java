@@ -17,6 +17,7 @@ import com.pixplicity.easyprefs.library.Prefs;
 
 import ai.lenna.spsiapp.R;
 import ai.lenna.spsiapp.home.HomeActivity;
+import ai.lenna.spsiapp.login.LoginActivity;
 import ai.lenna.spsiapp.login.LoginResponse;
 import ai.lenna.spsiapp.network.ApiBuilder;
 import ai.lenna.spsiapp.network.ApiService;
@@ -64,7 +65,11 @@ public class PengunduranActivity extends AppCompatActivity {
                                 call.enqueue(new Callback<LoginResponse>() {
                                     @Override
                                     public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-
+                                        Prefs.putInt(Constant.LOGIN,0);
+                                        Intent intent = new Intent(PengunduranActivity.this, LoginActivity.class);
+                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                        startActivity(intent);
+                                        finish();
                                     }
 
                                     @Override
