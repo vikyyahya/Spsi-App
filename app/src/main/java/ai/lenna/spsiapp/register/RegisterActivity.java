@@ -49,16 +49,16 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
         etPassword= findViewById(R.id.et_password);
 
         //
-        etNama.setText("viky");
-        etNik.setText("127102987");
-        etBagian.setText("Jahit");
-        etPlan.setText("B");
-        etTempatLahir.setText("klaten");
-        etJenisKelamin.setText("Laki - laki");
-        etAgama.setText("Islam");
-        etAlamat.setText("Tangerang");
-        etEmail.setText("viky@yahoo.com");
-        etPassword.setText("12345678");
+//        etNama.setText("viky");
+//        etNik.setText("127102987");
+//        etBagian.setText("Jahit");
+//        etPlan.setText("B");
+//        etTempatLahir.setText("klaten");
+//        etJenisKelamin.setText("Laki - laki");
+//        etAgama.setText("Islam");
+//        etAlamat.setText("Tangerang");
+//        etEmail.setText("viky@yahoo.com");
+//        etPassword.setText("12345678");
 
         btnRegister= findViewById(R.id.btn_daftar);
         progressDialog= new ProgressDialog(this);
