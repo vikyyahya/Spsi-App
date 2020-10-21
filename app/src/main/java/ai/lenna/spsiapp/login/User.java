@@ -13,6 +13,15 @@ public class User{
 	private String bagian;
 	private String email;
 	private String alamat;
+	private String status;
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
 	public String getNik() {
 		return nik;

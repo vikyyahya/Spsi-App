@@ -57,7 +57,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
 //        etJenisKelamin.setText("Laki - laki");
 //        etAgama.setText("Islam");
 //        etAlamat.setText("Tangerang");
-//        etEmail.setText("viky@yahoo.com");
+//        etEmail.setText("viky@yaho.com");
 //        etPassword.setText("12345678");
 
         btnRegister= findViewById(R.id.btn_daftar);

@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -16,6 +17,7 @@ import ai.lenna.spsiapp.R;
 import ai.lenna.spsiapp.berita.Berita;
 import ai.lenna.spsiapp.berita.BeritaAdapter;
 import ai.lenna.spsiapp.berita.BeritaResponse;
+import ai.lenna.spsiapp.home.HomeActivity;
 import ai.lenna.spsiapp.network.ApiBuilder;
 import ai.lenna.spsiapp.network.ApiService;
 import ai.lenna.spsiapp.util.Constant;
@@ -66,6 +68,14 @@ public class StrukturOrganisasi extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(StrukturOrganisasi.this, HomeActivity.class);
+        startActivity(intent);
 
     }
 }
