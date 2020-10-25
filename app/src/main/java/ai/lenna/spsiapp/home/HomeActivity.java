@@ -41,6 +41,7 @@ public class HomeActivity extends AppCompatActivity {
         ivInformasi = findViewById(R.id.iv_informasi);
         progressDialog = new ProgressDialog(this);
 
+        //
         ivProfile.setOnClickListener(goProfil);
         ivPengunduran.setOnClickListener(goPengunduran);
         ivInformasi.setOnClickListener(goInformasi);
@@ -52,6 +53,7 @@ public class HomeActivity extends AppCompatActivity {
     private View.OnClickListener goProfil = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            // pindah aktivity / halaman
             Intent intent = new Intent(HomeActivity.this, ProfilActivity.class);
             startActivity(intent);
             finish();

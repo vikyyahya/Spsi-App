@@ -50,8 +50,8 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
 
         //set test
 
-        edEmail.setText("viky@yahoo.com");
-        edPassword.setText("12345678");
+//        edEmail.setText("viky@yahoo.com");
+//        edPassword.setText("12345678");
 
         chekLogin();
 

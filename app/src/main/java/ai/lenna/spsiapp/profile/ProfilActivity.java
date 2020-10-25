@@ -24,7 +24,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ProfilActivity extends AppCompatActivity {
-    TextView etNama,etNik,etPlan,etBagian,etTempatLahir,etTanggalLahir,etJenisKelamin,etAgama,etAlamat,etEmail;
+    TextView etNama,etNik,etPlan,etBagian,etTempatLahir,etTanggalLahir,etJenisKelamin,etAgama,etAlamat,etEmail,etStatus;
     ProgressDialog progressDialog;
     Button btnUbah,btnKeluar;
 
@@ -45,6 +45,7 @@ public class ProfilActivity extends AppCompatActivity {
         etAlamat= findViewById(R.id.et_alamat);
         etEmail= findViewById(R.id.et_email);
         etNik = findViewById(R.id.et_nik);
+        etStatus = findViewById(R.id.et_status);
         btnUbah = findViewById(R.id.btn_ubah_profil);
         btnKeluar = findViewById(R.id.btn_logout);
         btnUbah.setOnClickListener(goUbahProfil);
@@ -73,6 +74,7 @@ public class ProfilActivity extends AppCompatActivity {
                 etAlamat.setText(response.body().getUser().getAlamat());
                 etEmail.setText(response.body().getUser().getEmail());
                 etTanggalLahir.setText(response.body().getUser().getTanggal_lahir());
+                etStatus.setText(response.body().getUser().getStatus());
                 progressDialog.hide();
             }
 

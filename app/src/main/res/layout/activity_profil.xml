@@ -404,6 +404,39 @@
                         android:layout_height="1dp"
                         android:layout_marginTop="10dp"
                         android:background="@color/line"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Status Keanggotaan"
+                            android:textSize="12sp"></TextView>
+
+                        <TextView
+                            android:id="@+id/et_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="-"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold"></TextView>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/line"></View>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
